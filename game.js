@@ -22,6 +22,18 @@ function StartGame(boardElement) {
 	}
 	
 	
+	// helper functions //
+	
+	function getPeiceFromElement(element) {
+		return playerPeices.find(function (p) {
+			if (p.id == peice.id)
+				return true;
+			else
+				return false;
+		});
+	}
+	
+	
 	// create the board
 	var board = [];
 	var rows = boardElement.getElementsByTagName("tr");
@@ -84,12 +96,7 @@ function StartGame(boardElement) {
 			}
 		}
 		
-		var x = playerPeices.find(function (p) {
-			if (p.id == peice.id)
-				return true;
-			else
-				return false;
-		});
+		var x = 
 		
 		console.log(x.x+", "+x.y);
 	};
